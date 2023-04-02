@@ -1,0 +1,10 @@
+.container {
+    gap: 5px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.container div {
+    font-size: 14px;
+}
