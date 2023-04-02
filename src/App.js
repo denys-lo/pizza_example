@@ -4,33 +4,33 @@ import Card from "./components/card";
 import NewProduct from "./components/new-product/new-product";
 import useOnlineStatus from "./components/hooks/useOnlineStatus";
 
-// const ApiProducts = [{
-//   imgSrc: 'https://ocdn.eu/pulscms-transforms/1/oP-k9kpTURBXy83ZmI0ZjU3MmYxNDhlMDI5NTUxODQ4MDg0OTM4ZTVmMC5qcGeTlQMAzKHNFEDNC2STCaYxMDE4ZmUGkwXNBLDNAnbeAAGhMAE/domowa-pizza.jpg',
-//   title: 'Піца Техас',
-//   ingredients: ['Кукурудза', 'Ковбаски баварські', 'Соус Барбекю', 'Моцарела', 'Гриби', 'Цибуля'],
-//   sizes: ['стандарт', 'велика', 'екстравелика'],
-//   doe: ['пухке', 'тонке'],
-//   bort: ['филадельфия', 'хот-дог'],
-//   price: 231
-// },
-//   {
-//     imgSrc: 'https://ocdn.eu/pulscms-transforms/1/oP-k9kpTURBXy83ZmI0ZjU3MmYxNDhlMDI5NTUxODQ4MDg0OTM4ZTVmMC5qcGeTlQMAzKHNFEDNC2STCaYxMDE4ZmUGkwXNBLDNAnbeAAGhMAE/domowa-pizza.jpg',
-//     title: 'Піца Техас',
-//     ingredients: ['Кукурудза', 'Ковбаски баварські', 'Соус Барбекю', 'Моцарела', 'Гриби', 'Цибуля'],
-//     sizes: ['стандарт', 'велика', 'екстравелика'],
-//     doe: ['пухке', 'тонке'],
-//     bort: ['филадельфия', 'хот-дог'],
-//     price: 231,
-//   },
-//   {
-//     imgSrc: 'https://ocdn.eu/pulscms-transforms/1/oP-k9kpTURBXy83ZmI0ZjU3MmYxNDhlMDI5NTUxODQ4MDg0OTM4ZTVmMC5qcGeTlQMAzKHNFEDNC2STCaYxMDE4ZmUGkwXNBLDNAnbeAAGhMAE/domowa-pizza.jpg',
-//     title: 'Піца Техас',
-//     ingredients: ['Кукурудза', 'Ковбаски баварські', 'Соус Барбекю', 'Моцарела', 'Гриби', 'Цибуля'],
-//     sizes: ['стандарт', 'велика', 'екстравелика'],
-//     doe: ['пухке', 'тонке'],
-//     bort: ['филадельфия', 'хот-дог'],
-//     price: 231,
-//   }];
+const ApiProducts = [{
+  imgSrc: 'https://ocdn.eu/pulscms-transforms/1/oP-k9kpTURBXy83ZmI0ZjU3MmYxNDhlMDI5NTUxODQ4MDg0OTM4ZTVmMC5qcGeTlQMAzKHNFEDNC2STCaYxMDE4ZmUGkwXNBLDNAnbeAAGhMAE/domowa-pizza.jpg',
+  title: 'Піца Техас',
+  ingredients: ['Кукурудза', 'Ковбаски баварські', 'Соус Барбекю', 'Моцарела', 'Гриби', 'Цибуля'],
+  sizes: ['стандарт', 'велика', 'екстравелика'],
+  doe: ['пухке', 'тонке'],
+  bort: ['филадельфия', 'хот-дог'],
+  price: 231
+},
+  {
+    imgSrc: 'https://ocdn.eu/pulscms-transforms/1/oP-k9kpTURBXy83ZmI0ZjU3MmYxNDhlMDI5NTUxODQ4MDg0OTM4ZTVmMC5qcGeTlQMAzKHNFEDNC2STCaYxMDE4ZmUGkwXNBLDNAnbeAAGhMAE/domowa-pizza.jpg',
+    title: 'Піца Техас',
+    ingredients: ['Кукурудза', 'Ковбаски баварські', 'Соус Барбекю', 'Моцарела', 'Гриби', 'Цибуля'],
+    sizes: ['стандарт', 'велика', 'екстравелика'],
+    doe: ['пухке', 'тонке'],
+    bort: ['филадельфия', 'хот-дог'],
+    price: 231,
+  },
+  {
+    imgSrc: 'https://ocdn.eu/pulscms-transforms/1/oP-k9kpTURBXy83ZmI0ZjU3MmYxNDhlMDI5NTUxODQ4MDg0OTM4ZTVmMC5qcGeTlQMAzKHNFEDNC2STCaYxMDE4ZmUGkwXNBLDNAnbeAAGhMAE/domowa-pizza.jpg',
+    title: 'Піца Техас',
+    ingredients: ['Кукурудза', 'Ковбаски баварські', 'Соус Барбекю', 'Моцарела', 'Гриби', 'Цибуля'],
+    sizes: ['стандарт', 'велика', 'екстравелика'],
+    doe: ['пухке', 'тонке'],
+    bort: ['филадельфия', 'хот-дог'],
+    price: 231,
+  }];
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -45,10 +45,10 @@ function App() {
   console.log(products);
   useEffect(() => {
     setTimeout(async () => {
-      const data = await fetch('http://localhost:3000/products');
-      const parsed = await data.json();
-      console.log(parsed);
-      setProducts(parsed);
+      // const data = await fetch('http://localhost:3000/products');
+      // const parsed = await data.json();
+      // console.log(parsed);
+      setProducts(ApiProducts);
     }, 2000);
   }, []);
 

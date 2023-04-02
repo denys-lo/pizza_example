@@ -24,22 +24,22 @@ function OrderForm(props) {
       counterRef: counterRef.current
     });
 
-    // try {
-    //   await fetch('http://localhost:3000/orders', {
-    //     method: 'POST',
-    //     headers: {
-    //       "Content-type":"application/json"
-    //     },
-    //     body: JSON.stringify({
-    //       id: new Date(),
-    //       quantity,
-    //       additions
-    //     })
-    //   });
-    // } catch (e) {
-    //   console.log(e);
-    // }
-    // alert(`your order contains ${quantity} pizzas and ${additions} additions`);
+    try {
+      await fetch('http://localhost:3000/orders', {
+        method: 'POST',
+        headers: {
+          "Content-type":"application/json"
+        },
+        body: JSON.stringify({
+          id: new Date(),
+          pizzaRef: pizzaRef.current.value,
+          additionsRef: additionsRef.current.value
+        })
+      });
+    } catch (e) {
+      console.log(e);
+    }
+    alert(`your order contains ${pizzaRef.current.value} pizzas and ${additionsRef.current.value} additions`);
   }
 
   return (
